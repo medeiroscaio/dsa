@@ -65,14 +65,6 @@ class LinkedList:
       current_value = current_value.next
     return False
   
-  def findMid(self):
-    ahead = self.head
-    while ahead and ahead.next:
-      ahead = ahead.next.next
-      self.head = self.head.next
-    return self.head
-
-  
   def reverse(self):
       new_list = None
 
@@ -84,23 +76,5 @@ class LinkedList:
 
 
       return new_list
+  
 
-
-linkedList = LinkedList()
-
-linkedList.addAtTail(10)
-linkedList.addAtTail(20)
-linkedList.addAtTail(30)
-linkedList.print_list()
-print("Tamanho:", linkedList.length())
-
-linkedList.add(5)
-linkedList.print_list()
-
-linkedList.removeFromHead()
-linkedList.print_list()
-print(linkedList.find(3))
-
-print(linkedList.reverse().value)
-
-print(linkedList.findMid())
